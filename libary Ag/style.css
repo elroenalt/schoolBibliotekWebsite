@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 0;
+    padding: 0; /* It's good practice to reset padding for lists too */
+}
+
+
+#header {
+    padding-top: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 10vh;
+    
+}
+#text-Header {
+    
+    line-height:normal;
+    align-items: left;
+    font-size: 3.7em;
+    font-weight: bold;
+}
+#subHeader {
+    
+    font-size:0.7em;
+}
+#header {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+#header img { 
+    width: auto; 
+    vertical-align: middle;
+}
+#navBar {
+    width: 100vw;
+    position: sticky; 
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    text-align: center;
+    font-size: 1.7em;
+}
+
+#mainBar {
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100vw; 
+    height: 90vh;
+
+}
+#contentLeft,
+#contentRight {
+    flex: 0 0 17vw;
+}
+#contentCenter {
+    flex: 1;
+    border-radius: 25px;
+    overflow: hidden;
+    flex: 1;
+}
+#sideContent1 {
+    flex: 0 0 20vw;
+    border-left: 0.1vw solid #0070b8 ;
+}
+
+#bottomBar {
+    display: flex;
+    width: 100vw; 
+    height: 10vh;
+    align-items:  center;
+}
+
+/* transitions */
+
+#navBar a {
+    color: #FFF8E1;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 15px;
+    white-space: nowrap; 
+    transition: color 0.3s ease;
+}
+#navBar a:hover {
+    text-decoration: underline;
+    background-color: #095d96;
+}
+
+/* colors */
+
+body {
+    background-color: #1ec1d2;
+    color: #FFF8E1;
+}
+
+
+#header {
+    background-color: #0072bc;
+    color: #FFF8E1;
+}
+#navBar {
+    background-color: #0072bc; 
+    color: #FFF8E1;
+}
+
+#contentLeft,
+#contentRight {
+    background-color: #1ec1d2;
+}
+#contentCenter {
+    background-color: #fff;
+    color: black;
+}
+
+#bottomBar {
+    background-color: #1ec1d2;
+}
+#contacts {
+    background-color: #0070b8;
+    color: #FFF8E1;
+}
+
+/* content */
+#heading1 {
+padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    color: black;
+    font-weight: bold;
+}
