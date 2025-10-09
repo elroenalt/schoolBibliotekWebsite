@@ -14,40 +14,83 @@
 <main>
     <div id="header">
             <div id="TitleBar">
-                <img src="Images\FES_LOGO_LIBARY.png" alt="FES Logo" id="FES-Logo">
+                 Bibliotheks AG <br>FES Lörrach
             </div>
+    </div>
+    
         <div id="navBar">
-            <a href="https://www.w3schools.com/tags/tag_a.asp"> Home</a>
-            <a href="https://www.w3schools.com/css/css_comments.asp"> Bücher</a>
-            <a href="https://gemini.google.com/app/fb9637b5e193caf7?hl=de"> Aktionen</a>
-            <a href="https://www.canva.com/s/designs"> Über uns</a>
+            <a class="selected"> Home</a>
+            <a href="buecher.html" > Bücher</a>
+            <a href="aktionen.html"> Aktionen</a>
+            <a href="ueberUns.html"> Über uns</a>
             <a href="https://www.fesloe.de"> Unsere Schule</a>
         </div>
-    </div>
     <div id="container">
+        <div id="content">
+            Wir sind die Bibliotheks-AG der Freien Evangelischen Schule (FES) in Lörrach.<br> Auf dieser Website findest du spannende Aktionen, Buchempfehlungen und Bewertungen.
+            <br><br>
+            Dies Schulbibliothek ist in den Pause für alle Schülerinnen und Schüler der FES geöffnet.
+            <br><br>
+            Schau gerne vorbei - wir freuen uns auf dich!<br>
+        </div>
         <div id="bookTips">
             <div id="arrowLeft" class="arrow"><</div>
             <div class="bookTip" id="bookTip0">
                 <div id="bookTip0Title" class="bookTipTitle"></div>
                 <img id="bookTip0IMG" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Wmb591rTMK6I2MWwYBuznPEpWz5q5Ixaww&s" alt="bookText">
-                <div id="bookTip0Content" class="bookTipContent"></div>
+                <div id="bookTip0Author" ></div>
+                <div id="bookTip0AgeRange" ></div>
+                <div id="bookTip0Genre" ></div>
+                <div id="bookTip0By" ></div>
             </div>
             <div class="bookTip" id="bookTip1">
                 <div id="bookTip1Title" class="bookTipTitle"></div>
                 <img id="bookTip1IMG" src="" alt="bookText">
-                <div id="bookTip1Content" class="bookTipContent"></div>
+                <div id="bookTip1Author" ></div>
+                <div id="bookTip1AgeRange" ></div>
+                <div id="bookTip1Genre" ></div>
+                <div id="bookTip1By" ></div>
             </div>
             <div class="bookTip" id="bookTip2">
                 <div id="bookTip2Title" class="bookTipTitle"></div>
                 <img id="bookTip2IMG" src="" alt="bookText">
-                <div id="bookTip2Content" class="bookTipContent"></div>
+                <div id="bookTip2Author" ></div>
+                <div id="bookTip2AgeRange" ></div>
+                <div id="bookTip2Genre" ></div>
+                <div id="bookTip2By" ></div>
             </div>
             <div id="arrowRight" class="arrow">></div>
+        </div>
+        <form id="feedbackForm" method="POST">
+    
+    <label for="message">Your Feedback:</label>
+    <textarea id="message" name="message" rows="2" required></textarea><br><br>
+    
+    <input type="hidden" name="_subject" value="Anonymous School Feedback Submission">
+    
+    <button type="submit">Send Feedback Anonymously</button>
+    
+    <p id="formStatus" style="font-weight: bold;"></p>
+</form>
+
+    </div>
+    <div id="overlay">
+        <div id="bookTipDisplay">
+            <div id="title">test</div>
+            <img id="IMG" src="" alt="bookText">
+            <div id="information">
+                <div id="author">author: ___</div>
+                <div id="age-range">age-range: __-__ <br></div>
+                <div id="genre">genre: ___</div>
+                <div id="rezession">very good cause....Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>   
+            </div>
+            <div id="closeBookTip">close</div>
         </div>
     </div>
 </main>
 
-<script src="code.js"></script>
+<script src="bookTips.js"></script>
+<script src="feedback.js"></script>
 
 </body>
 </html>
