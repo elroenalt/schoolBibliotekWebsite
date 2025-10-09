@@ -1,23 +1,38 @@
 [
   {
-    "title": "test1",
-    "content": "blablabla",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Wmb591rTMK6I2MWwYBuznPEpWz5q5Ixaww&s"
-  },{
-    "title": "test2",
-    "content": "blablabla",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Wmb591rTMK6I2MWwYBuznPEpWz5q5Ixaww&s"
-  },{
-    "title": "test3",
-    "content": "blablabla",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Wmb591rTMK6I2MWwYBuznPEpWz5q5Ixaww&s"
-  },{
-    "title": "test4",
-    "content": "blablabla",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Wmb591rTMK6I2MWwYBuznPEpWz5q5Ixaww&s"
-  },{
-    "title": "test5",
-    "content": "blablabla",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Wmb591rTMK6I2MWwYBuznPEpWz5q5Ixaww&s"
-  }
+    "title": "Der König von Narnia",
+    "rezension": "Ein zeitloser Klassiker, der vier Kinder in die magische Welt von **Narnia** entführt, ein Land, das von der bösen Weißen Hexe in ewigem Winter gefangen gehalten wird. Voller Wunder, sprechender Tiere und einem epischen Kampf zwischen Gut und Böse, verkörpert durch den großartigen Löwen **Aslan**. Eine perfekte Einführung in die High Fantasy und ein Muss für jedes Alter. Ein wahrhaft bezauberndes Abenteuer, das die Fantasie beflügelt.",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.-dfb2KOuiF_arkHejyFN_QAAAA?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3",
+    "author": "C.S. Lewis",
+    "ageRange": "10-12",
+    "genre": "fantasy",
+    "by": "Eva"
+   },
+   {
+    "title": "Percy Jackson – Diebe im Olymp",
+    "rezension": "Lernen Sie **Percy Jackson** kennen, einen Jungen, der dachte, er sei normal, bis er entdeckt, dass er ein **Halbgott** ist – der Sohn eines griechischen Gottes! Dieses actiongeladene Abenteuer ist eine frische, witzige und spannende Interpretation der griechischen Mythologie, in der Percy und seine neuen Freunde sich auf eine Queste begeben, um einen Krieg unter den olympischen Göttern zu verhindern. Ein rasanter, fesselnder Lesestoff, der alte Mythen unglaublich aktuell macht.",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.-dfb2KOuiF_arkHejyFN_QAAAA?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3",
+    "author": "Rick Riordan",
+    "ageRange": "10-12",
+    "genre": "fantasy",
+    "by": "Bert"
+   },
+   {
+    "title": "Morrigan Crows wundersame Abenteuer",
+    "rezension": "**Morrigan Crow** ist ein 'verfluchtes' Kind, das für alles Unglück verantwortlich gemacht wird und dazu bestimmt ist, an ihrem elften Geburtstag zu sterben. Doch ein geheimnisvoller Mann namens **Jupiter North** entführt sie in die verborgene, magische Stadt **Nevermoor**. Um bleiben zu dürfen, muss sie sich in Prüfungen beweisen, um der elitären Wundersamen Gesellschaft beizutreten. Dieses Buch steckt voller skurriler Charaktere, erfinderischer Magie und einer wahrhaft schillernden Welt – es wird als die nächste große Kinder-Fantasy-Reihe gehandelt.",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.-dfb2KOuiF_arkHejyFN_QAAAA?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3",
+    "author": "Jessica Townsend",
+    "ageRange": "10-12",
+    "genre": "fantasy",
+    "by": "Mia"
+   },
+   {
+    "title": "Der Hobbit",
+    "rezension": "Die Reise beginnt mit **Bilbo Beutlin**, einem gemütlichen, heimliebenden Hobbit, der vom Zauberer **Gandalf** und einer Zwergengruppe in ein unerwartetes Abenteuer verwickelt wird. Ihre Suche nach einem gestohlenen Schatz, der vom Drachen **Smaug** bewacht wird, ist ein grundlegendes Werk der Fantasy. Es ist eine entzückende, detailreiche Geschichte über Mut, Reichtum und unerwartetes Heldentum. Ein perfekter Einstieg in komplexere Fantasy-Welten.",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.-dfb2KOuiF_arkHejyFN_QAAAA?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3",
+    "author": "J.R.R. Tolkien",
+    "ageRange": "10-12",
+    "genre": "fantasy",
+    "by": "Tobi"
+   }
 ]
