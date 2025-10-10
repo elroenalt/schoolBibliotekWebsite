@@ -10,29 +10,96 @@ body {
 }
 a {
     text-decoration: none;
-    color: white;
-    cursor: pointer;
-    margin: 0 1.5rem;
     transition: color 0.3s, text-decoration 0.3s;
+    cursor: pointer;
+
 }
-#content {
-    width: 100%;
-    height: auto;
-    font-size: 1.5rem;
-    text-align: left;
-    text-align: center;
-    padding: 2rem;
-    color:#444;
-    padding-top: 5rem;
-    margin-top: 0rem;
+#navBar a {
+    color: white;
+    margin: 0 1.5rem;
 }
 a.selected {
     text-decoration: underline;
 }
 a:hover {
     text-decoration: underline;
-    color: #f0f0f0;
 }
+
+/* Table Styles */
+table {
+    left: 50%;
+    position: relative;
+    text-align: center;
+    border-collapse: collapse; 
+    width: 40rem;
+    transform: translate(-50%,0rem) scale(0.8)
+}
+th, td {
+    border: 1px solid #333; 
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f0f0f0;
+}
+
+/* Main Content Area */
+#content {
+    width: 100%;
+    height: auto;
+    font-size: 1.5rem;
+    text-align: center; /* Keeping the final 'center' alignment */
+    padding-right: 5rem;
+    color: #444;
+    padding-top: 5rem;
+}
+
+#header {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 12rem;
+    background-color: #0072bc;
+    position: relative;
+}
+#TitleBar {
+    color: white;
+    text-align: center;
+    font-size: 3.5rem;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+#navBar {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 3rem;
+    width: 100%;
+    top: 0rem;
+    font-size: 2rem;
+    color: white;
+    position: sticky;
+    background-color: #0066a9;
+    z-index: 100;
+}
+
+/* --- Main Content Container --- */
+#container {
+    margin-top: -1rem;
+    position: relative;
+    width: 90vw;
+    left: 50%;
+    transform: translate(-50%,0px);
+    border-radius: 10px;
+    min-height: 190vh;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding-bottom: 50px;
+}
+
+/* --- BookTips Modal/Overlay Styles --- */
 #overlay {
     position: fixed;
     top: 0;
@@ -46,8 +113,6 @@ a:hover {
     display: flex;
     justify-content: center; 
     align-items: center; 
-}
-#overlay {
     user-select: none;
     pointer-events: none;
 }
@@ -57,38 +122,41 @@ a:hover {
     width: 50%;
     min-height: 70vh;
     background-color: white;
+    max-height: 90vh;
     text-align: center;
-    align-items: center;
     display: none;
     border-radius: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 #title {
-    font-size: 3rem;
-    align-items: center;
+    font-size: 1.5rem;
     color: #004d99;
     font-weight: 800;
     margin-bottom: 15px;
     border-bottom: 3px solid #007bff;
     padding-bottom: 8px;
 }
+#IMG {
+    max-width: 15rem;
+    max-height: 15rem;
+}
 .IMG {
-    max-width: 80%;
-    height: auto;
     margin: 15px auto;
     border: 3px solid #007bff;
     border-radius: 6px;
     object-fit: contain;
-    align-items: center;
+    max-width: 80%;
 }
 #information {
-    max-height: 25vh;
-    overflow-y:auto;
+    max-height: 35vh;
+    overflow-y: auto;
     overflow-x: hidden;
     font-size: 1rem;
     text-align: left;
     margin-left: 3rem;
     margin-right: 3rem;
+    box-shadow: 0 6px 15px rgba(255, 193, 250, 0.1);
+
 }
 #closeBookTip {
     background-color: #007bff;
@@ -110,53 +178,6 @@ a:hover {
 }
 #closeBookTip:active {
     transform: translateY(1px);
-}
-
-/* --- Header and Navigation --- */
-#header {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 12rem;
-    background-color: #0072bc;
-    position: relative;
-}
-#TitleBar {
-    color: white;
-    text-align: center;
-    font-size: 4rem;
-    margin-top: 1.5rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-#navBar {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    height: 3rem;
-    width: 100%;
-    top: 0rem;
-    font-size: 2rem;
-    color: white;
-    position:sticky;
-    background-color: #0066a9;;
-    z-index: 100;
-
-}
-
-/* --- Main Content Container --- */
-#container {
-    margin-top: -1rem;
-    position: relative;
-    width: 90vw;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    min-height: 190vh;
-    background: white;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    padding-bottom: 50px;
 }
 
 /* --- 1. BookTips Container (The Carousel Track) --- */
@@ -204,7 +225,6 @@ a:hover {
 
 /* --- 3. Individual Book Tip Cards --- */
 .bookTip {
-    /* Ensures the desktop layout of 3 cards side-by-side */
     flex: 1; 
     margin: 0 15px;
     background-color: #ffffff;
@@ -223,7 +243,7 @@ a:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* --- 4. Card Content Styling --- */
+/* --- 4. Card Content Styling (Merged Image styles) --- */
 .bookTipTitle {
     color: #004d99;
     font-size: 1.3rem;
@@ -234,13 +254,14 @@ a:hover {
     text-align: center;
 }
 .bookTip img {
+    /* Merged with .IMG properties, keeping the card-specific dimensions */
     max-width: 80%;
     max-height: 60%;
     margin: 15px auto;
     border: 3px solid #007bff;
     border-radius: 6px;
     object-fit: contain;
-    align-items: center;
+    /* align-items: center is not a valid CSS property here */
 }
 .bookTipContent {
     color: #444;
@@ -307,64 +328,66 @@ a:hover {
     padding: 10px;
     border-radius: 4px;
 }
-
 /* -------------------------------------- */
 /* --- Media Queries for Mobile (Phones) --- */
 /* -------------------------------------- */
 @media screen and (max-width: 768px) {
     
     /* --- Main Container Adjustments --- */
+    html {
+        width: 100vw;
+    }
     #container {
-        width: 100vw; /* Use more width on small screens */  /* Pull up a bit more */
+        width: 100vw; 
+        margin-top: -1rem; /* Pull up a bit more, kept from original #container */
         border-radius: 0rem;
     }
 
     /* --- Header Adjustments --- */
     #header {
-        height: 12rem; /* Make the header shorter */
+        width: 100%;
+        height: 7rem; /* Slightly reduced height */
     }
     #TitleBar {
-        font-size: 2rem; /* Reduce title size */
+        font-size: 2rem; 
     }
     #navBar {
-        font-size: 1rem; /* Reduce navigation font size */
-        bottom: 1rem; /* Move closer to the bottom */
-        flex-wrap: wrap; /* Allow links to wrap to the next line if needed */
-        padding: 0 10px;
+        font-size: 1rem; 
+        height: 4rem;
+        /* Removed redundant bottom: 1rem; as sticky top: 0rem is likely desired */
+        flex-wrap: wrap; 
     }
     #navBar a {
-        margin: 0.5rem 0.5rem; /* Reduce spacing between links */
+        margin: 0.5rem 0.5rem; 
     }
 
     /* --- Book Tips (Carousel) Adjustments for Single View --- */
     #bookTips {
         justify-content: center;
-        height: auto; /* Allow height to adjust to content */
-        
-        width: 100%; /* Use full container width for track */
+        width: 100%; 
         padding: 0;
         margin: 20px auto;
     }
 
     /* Change Book Tips to be full width and side-by-side in scroll view */
     .bookTip {
-        flex: none; /* Disable flex-grow */
-        min-width: 80%; /* Make card take up most of the screen width */
-        margin: 20px 2.5%; /* Adjust margin to center it and create space */
-        scroll-snap-align: center; /* Snap to the center of the card */
-        padding: 15px; /* Reduce padding */
+        flex: none; 
+        min-width: 80%; 
+        margin: 20px 2.5%; 
+        scroll-snap-align: center; 
+        padding: 15px; 
+        max-width: 80%; 
     }
     
     .bookTip:hover {
-        transform: none; /* Disable lift effect on mobile for better touch experience */
+        transform: none; 
     }
 
     .bookTip img {
         max-width: 90%;
         margin: 10px auto;
     }
-    
-    /* --- Form Adjustments --- */
-    #feedbackForm {
+    #content {
+        font-size: 1rem;
     }
 }

@@ -18,19 +18,19 @@ document.getElementById('feedbackForm').addEventListener('submit', async functio
         });
 
         if (response.ok) {
-            statusDisplay.textContent = 'Thank you! Your feedback has been sent.';
+            statusDisplay.textContent = 'Danke für den feedback';
             statusDisplay.style.color = 'green';
             form.reset();
         } else {
             const data = await response.json();
             console.error('Submission failed:', data);
             
-            statusDisplay.textContent = data.error || 'Sorry, there was an issue sending the feedback.';
+            statusDisplay.textContent = data.error || 'Ein fehler ist aufgetreten';
             statusDisplay.style.color = 'red';
         }
     } catch (error) {
         console.error('Network Error:', error);
-        statusDisplay.textContent = 'A connection error occurred. Check your internet and try again.';
+        statusDisplay.textContent = 'Verbindung zum server hergestellt';
         statusDisplay.style.color = 'red';
     }
 });

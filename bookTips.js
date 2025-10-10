@@ -119,7 +119,7 @@ class BookTipDisplay {
         this.display.Title.textContent = tip.title
         this.display.IMG.src = tip.image
         this.display.Author.textContent = "Author: " + tip.author
-        this.display.AgeRange.textContent = "Alterbeschränkung: " + tip.minAge
+        this.display.AgeRange.textContent = "Alterempfählung: " + tip.minAge
         this.display.Genre.textContent = "Genre: " + tip.genre
         this.display.By.textContent = "Rezesion von: " +  tip.by
     }
@@ -135,9 +135,9 @@ function openBookTip(tip) {
     const bookTip = bookTips[tip]
     console.log(bookTip.title)
     bookTipDisplay.title.textContent = bookTip.title
-    bookTipDisplay.author.textContent = 'author: '+ bookTip.author
-    bookTipDisplay.genre.textContent = 'genre: ' + bookTip.genre
-    bookTipDisplay.agerange.textContent = 'age-Range: '+ bookTip.ageRange
+    bookTipDisplay.author.textContent = 'Author: '+ bookTip.author
+    bookTipDisplay.genre.textContent = 'Genre: ' + bookTip.genre
+    bookTipDisplay.agerange.textContent = 'Alterempfählung: '+ bookTip.ageRange
     bookTipDisplay.rezession.textContent = bookTip.rezension
     bookTipDisplay.IMG.src = bookTip.image
     bookTipDisplay.container.style.display = 'block'
