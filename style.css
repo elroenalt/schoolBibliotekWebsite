@@ -8,6 +8,15 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+html, body {
+        width: 100%; /* Ensure they don't exceed 100% of the visible area */
+        overflow-x: hidden; /* Prevent horizontal scrolling entirely */
+    }
+    body {
+        /* Reset any default browser margin/padding that might conflict */
+        margin: 0; 
+        padding: 0;
+    }
 a {
     text-decoration: none;
     transition: color 0.3s, text-decoration 0.3s;
@@ -83,6 +92,8 @@ th {
     position: sticky;
     background-color: #0066a9;
     z-index: 100;
+    white-space: wrap; 
+    padding: 0rem;
 }
 
 /* --- Main Content Container --- */
@@ -334,13 +345,23 @@ th {
 @media screen and (max-width: 768px) {
     
     /* --- Main Container Adjustments --- */
-    html {
-        width: 100vw;
+    #bookTipDisplay {
+        z-index: 100000;
+        width: 99%;
+    }
+    #navBar {
+        height: 1rem;
+        display: block;
+    }
+    #navBar a {
+        margin: 0 0.2rem;
     }
     #container {
         width: 100vw; 
-        margin-top: -1rem; /* Pull up a bit more, kept from original #container */
+        margin-top: -1rem; 
         border-radius: 0rem;
+        left: 0 !important; /* Align to the far left */
+        transform: none !important; /* Remove the transform: translate(-50%,0px) that was fighting the 100vw width */
     }
 
     /* --- Header Adjustments --- */
@@ -356,9 +377,6 @@ th {
         height: 4rem;
         /* Removed redundant bottom: 1rem; as sticky top: 0rem is likely desired */
         flex-wrap: wrap; 
-    }
-    #navBar a {
-        margin: 0.5rem 0.5rem; 
     }
 
     /* --- Book Tips (Carousel) Adjustments for Single View --- */
