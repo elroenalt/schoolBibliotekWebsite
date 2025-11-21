@@ -9,11 +9,10 @@ body {
     font-family: Arial, sans-serif;
 }
 html, body {
-        width: 100%; /* Ensure they don't exceed 100% of the visible area */
-        overflow-x: hidden; /* Prevent horizontal scrolling entirely */
+        width: 100%;
+        overflow-x: hidden;
     }
     body {
-        /* Reset any default browser margin/padding that might conflict */
         margin: 0; 
         padding: 0;
     }
@@ -70,7 +69,7 @@ th {
     align-items: center;
     height: 12rem;
     background-color: #0072bc;
-    position: relative;
+    position: block;
 }
 #TitleBar {
     color: white;
@@ -89,9 +88,9 @@ th {
     top: 0rem;
     font-size: 2rem;
     color: white;
-    position: sticky;
-    background-color: #0066a9;
-    z-index: 100;
+    position: relative;
+    padding-bottom: 5rem;
+    background-color: #0072bc;
     white-space: wrap; 
     padding: 0rem;
 }
@@ -132,6 +131,7 @@ th {
     pointer-events: all;
     width: 50%;
     min-height: 70vh;
+    z-index: 99;
     background-color: white;
     max-height: 90vh;
     text-align: center;
@@ -269,7 +269,7 @@ th {
     max-width: 80%;
     max-height: 60%;
     margin: 15px auto;
-    border: 3px solid #007bff;
+    border: 3px solid rgb(0, 0, 0);
     border-radius: 6px;
     object-fit: contain;
     /* align-items: center is not a valid CSS property here */
@@ -343,15 +343,28 @@ th {
 /* --- Media Queries for Mobile (Phones) --- */
 /* -------------------------------------- */
 @media screen and (max-width: 768px) {
-    
+    #information {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
     /* --- Main Container Adjustments --- */
+    #IMG {
+        width: 100px
+    }
+    #overlay {
+        height: 100vh;
+    }
     #bookTipDisplay {
-        z-index: 100000;
-        width: 99%;
+        z-index: 10;
+        width: 100%;
+        height: 100vh;
+        border-radius: 0rem;
+        background-color: white;
     }
     #navBar {
-        height: 1rem;
+        height: 2rem;
         display: block;
+        margin-bottom: 1rem;
     }
     #navBar a {
         margin: 0 0.2rem;
@@ -367,13 +380,13 @@ th {
     /* --- Header Adjustments --- */
     #header {
         width: 100%;
-        height: 7rem; /* Slightly reduced height */
+        height: 8.5rem; /* Slightly reduced height */
     }
     #TitleBar {
-        font-size: 2rem; 
+        font-size: 2.5rem; 
     }
     #navBar {
-        font-size: 1rem; 
+        font-size: 1.5rem; 
         height: 4rem;
         /* Removed redundant bottom: 1rem; as sticky top: 0rem is likely desired */
         flex-wrap: wrap; 
@@ -394,7 +407,7 @@ th {
         margin: 20px 2.5%; 
         scroll-snap-align: center; 
         padding: 15px; 
-        max-width: 80%; 
+        width: 90%; 
     }
     
     .bookTip:hover {

@@ -1,0 +1,1 @@
+const aktionen = ["Aktionen/FES_Lesewetbewerb_2025.png"]

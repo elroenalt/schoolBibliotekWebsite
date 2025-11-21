@@ -47,7 +47,7 @@ class BookTipsManager {
         this.RightArrow = document.querySelector('#arrowRight')
         this.LeftArrow.addEventListener('click', () => this.changeBookTips(-1))
         this.RightArrow.addEventListener('click', () => this.changeBookTips(1))
-        this.updateArrowVisibility()
+        this.updateTipsPerView()
     }
     updateTipsPerView() {
         const MobileView = isMobileView()
@@ -56,9 +56,13 @@ class BookTipsManager {
         if(MobileView) {
             display = 'none'
         }
-        for(let i = 1; i < 3; i++) {
-            this.displays[i].display.Container.style.display = 'block'
+        for(let i = 0; i < 3; i++) {
+            this.displays[i].display.Container.style.display = display
         }
+        TipIndex = -1;  
+        this.updateArrowVisibility()
+        this.changeBookTips(1)
+        this.changeBookTips(-1)
         
     }
     updateArrowVisibility() {
@@ -173,5 +177,8 @@ document.querySelector('#closeBookTip').addEventListener('click',()=> {
 })
 
 // check if the user resized theyre screen
-window.addEventListener('resize', () => bookTipsManager.updateTipsPerView ());
+window.addEventListener('resize', () => {
+    bookTipsManager.updateTipsPerView()
+    
+});
 
