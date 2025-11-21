@@ -67,7 +67,7 @@ th {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 12rem;
+    height: 11rem;
     background-color: #0072bc;
     position: block;
 }
@@ -80,19 +80,18 @@ th {
     letter-spacing: 1px;
 }
 #navBar {
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     text-align: center;
-    height: 3rem;
+    height: 5rem;
     width: 100%;
     top: 0rem;
     font-size: 2rem;
     color: white;
     position: relative;
-    padding-bottom: 5rem;
     background-color: #0072bc;
-    white-space: wrap; 
-    padding: 0rem;
 }
 
 /* --- Main Content Container --- */
@@ -108,9 +107,24 @@ th {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     padding-bottom: 50px;
 }
-
-/* --- BookTips Modal/Overlay Styles --- */
+#actions {
+    left: 50%;
+    position: relative;
+    transform: translate(-50%,0);
+    width: 90%;
+    padding: 2rem;
+    text-align: center;
+}
+.action {
+    width: 60vw;
+    border: solid 1px black;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
 #overlay {
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
     position: fixed;
     top: 0;
     left: 0;
@@ -133,7 +147,6 @@ th {
     min-height: 70vh;
     z-index: 99;
     background-color: white;
-    max-height: 90vh;
     text-align: center;
     display: none;
     border-radius: 2rem;
@@ -265,14 +278,12 @@ th {
     text-align: center;
 }
 .bookTip img {
-    /* Merged with .IMG properties, keeping the card-specific dimensions */
     max-width: 80%;
     max-height: 60%;
     margin: 15px auto;
     border: 3px solid rgb(0, 0, 0);
     border-radius: 6px;
     object-fit: contain;
-    /* align-items: center is not a valid CSS property here */
 }
 .bookTipContent {
     color: #444;
@@ -282,8 +293,6 @@ th {
     flex-grow: 1;
     overflow-y: auto;
 }
-
-/* --- Form Styles --- */
 #feedbackForm {
     width: 80%;
     margin: 50px auto;
@@ -339,22 +348,28 @@ th {
     padding: 10px;
     border-radius: 4px;
 }
-/* -------------------------------------- */
-/* --- Media Queries for Mobile (Phones) --- */
-/* -------------------------------------- */
 @media screen and (max-width: 768px) {
-    #information {
-        margin-left: 1rem;
-        margin-right: 1rem;
+    #title {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
-    /* --- Main Container Adjustments --- */
-    #IMG {
-        width: 100px
+    #information {
+        border-top: solid 3px #007bff ;
+        border-bottom: solid 3px #007bff ;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        max-height: 90vh;
     }
     #overlay {
         height: 100vh;
     }
     #bookTipDisplay {
+        overflow-y: scroll;
         z-index: 10;
         width: 100%;
         height: 100vh;
@@ -362,37 +377,30 @@ th {
         background-color: white;
     }
     #navBar {
-        height: 2rem;
         display: block;
         margin-bottom: 1rem;
+        font-size: 1.5rem; 
+        height: 4rem;
+        border: solid 1px #0072bc ;
     }
     #navBar a {
-        margin: 0 0.2rem;
+        margin-left:  0.1rem;
     }
     #container {
         width: 100vw; 
         margin-top: -1rem; 
         border-radius: 0rem;
-        left: 0 !important; /* Align to the far left */
-        transform: none !important; /* Remove the transform: translate(-50%,0px) that was fighting the 100vw width */
+        left: 0 !important; 
+        transform: none !important; 
     }
 
-    /* --- Header Adjustments --- */
     #header {
         width: 100%;
-        height: 8.5rem; /* Slightly reduced height */
+        height: 8.5rem; 
     }
     #TitleBar {
         font-size: 2.5rem; 
     }
-    #navBar {
-        font-size: 1.5rem; 
-        height: 4rem;
-        /* Removed redundant bottom: 1rem; as sticky top: 0rem is likely desired */
-        flex-wrap: wrap; 
-    }
-
-    /* --- Book Tips (Carousel) Adjustments for Single View --- */
     #bookTips {
         justify-content: center;
         width: 100%; 
@@ -400,7 +408,6 @@ th {
         margin: 20px auto;
     }
 
-    /* Change Book Tips to be full width and side-by-side in scroll view */
     .bookTip {
         flex: none; 
         min-width: 80%; 
@@ -409,11 +416,12 @@ th {
         padding: 15px; 
         width: 90%; 
     }
-    
+    .action {
+        width: 100%;
+    }
     .bookTip:hover {
         transform: none; 
     }
-
     .bookTip img {
         max-width: 90%;
         margin: 10px auto;

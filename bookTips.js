@@ -57,7 +57,7 @@ class BookTipsManager {
             display = 'none'
         }
         for(let i = 0; i < 3; i++) {
-            this.displays[i].display.Container.style.display = display
+            this.displays[i].display.Container.style.display = i < bookTips.length ? "block" : display
         }
         TipIndex = -1;  
         this.updateArrowVisibility()
@@ -98,7 +98,6 @@ class BookTipsManager {
 
 }
 
-// Book tips 
 class BookTipDisplay {
     constructor(index) {
         this.curIndex = 0
@@ -120,6 +119,7 @@ class BookTipDisplay {
     changeContent(newIndex) {
         this.curIndex = newIndex
         const tip = bookTips[this.curIndex]
+        console.log(this.display.Title)
         this.display.Title.textContent = tip.title
         this.display.IMG.src = tip.image
         this.display.Author.textContent = "Author: " + tip.author
@@ -130,7 +130,6 @@ class BookTipDisplay {
     
 }
 
-// opens and loads the book Tip screen
 function openBookTip(tip) {
     if(tip < 0 || tip > bookTips.length) {
         return false
@@ -147,7 +146,6 @@ function openBookTip(tip) {
     bookTipDisplay.container.style.display = 'block'
 }
 
-// checks if your phone schould display mobile view
 function isMobileView() {
     if (window.matchMedia("(max-width: 768px)").matches) {
         return true
@@ -156,7 +154,6 @@ function isMobileView() {
     }
 }
 
-// loads the files for book tips
 async function fetchJsonFiles() {
     try {
         const response = await fetch(JsonFile);
@@ -175,10 +172,11 @@ async function fetchJsonFiles() {
 document.querySelector('#closeBookTip').addEventListener('click',()=> {
     bookTipDisplay.container.style.display = 'none'
 })
-
-// check if the user resized theyre screen
+document.addEventListener("load",() => {
+    
 window.addEventListener('resize', () => {
     bookTipsManager.updateTipsPerView()
-    
 });
+})
+// check if the user resized theyre screen
 
