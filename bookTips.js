@@ -123,7 +123,7 @@ class BookTipDisplay {
         this.display.Title.textContent = tip.title
         this.display.IMG.src = tip.image
         this.display.Author.textContent = "Author: " + tip.author
-        this.display.AgeRange.textContent = "Alterempfählung: " + tip.minAge
+        this.display.AgeRange.textContent = "Alterempfählung: " + tip.ageRange
         this.display.Genre.textContent = "Genre: " + tip.genre
         this.display.By.textContent = "Rezesion von: " +  tip.by
     }

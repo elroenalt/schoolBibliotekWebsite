@@ -103,6 +103,7 @@ th {
     transform: translate(-50%,0px);
     border-radius: 10px;
     min-height: 190vh;
+    min-height: 190dvh;
     background: white;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     padding-bottom: 50px;
@@ -132,6 +133,7 @@ th {
     bottom: 0;
     width: 100%;
     height: 100vh;
+    height: 100dvh;
     z-index: 50;
     background-color: rgba(0, 0, 0, 0.1); 
     display: flex;
@@ -145,6 +147,7 @@ th {
     pointer-events: all;
     width: 50%;
     min-height: 70vh;
+    min-height: 70dvh;
     z-index: 99;
     background-color: white;
     text-align: center;
@@ -173,6 +176,7 @@ th {
 }
 #information {
     max-height: 35vh;
+    max-height: 35dvh;
     overflow-y: auto;
     overflow-x: hidden;
     font-size: 1rem;
@@ -364,15 +368,18 @@ th {
         padding-left: 1rem;
         padding-right: 1rem;
         max-height: 90vh;
+        max-height: 90dvh;
     }
     #overlay {
         height: 100vh;
+        height: 100dvh;
     }
     #bookTipDisplay {
         overflow-y: scroll;
         z-index: 10;
         width: 100%;
         height: 100vh;
+        height: 100dvh;
         border-radius: 0rem;
         background-color: white;
     }
