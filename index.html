@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Bibliothek AG FES</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleSheet.css">
     <link rel="icon" type="image/x-icon" href="Images/website_icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
@@ -10,22 +10,17 @@
     <meta name="description" content="Website der FES-Lörrach Biblioheks AG">
 </head>
 <body>
-
 <main>
-    <div id="header">
-            <div id="TitleBar">
-                 Bibliothek AG <br>FES Lörrach
-            </div>
+<div id="Container">
+    <div id="Header" style="grid-area: header;">Bibliothek Ag<br>FES Lörrach</div>
+    <div id="NavBar" style="grid-area: navBar;">
+        <div class="Bar-Item underLine" id="Bar-Item-1">HOME</div>
+        <div class="Bar-Item" id="Bar-Item-2">Aktionen</div>
+        <!-- <div class="Bar-Item" id="Bar-Item-3">Über&nbsp;Uns</div> -->
+        <div class="Bar-Item" id="Bar-Item-4">Unsere&nbsp;Schule</div>
     </div>
-    
-        <div id="navBar">
-            <a class="selected"> Home</a>
-            <a href="aktionen.html"> Aktionen</a>
-            <a href="ueberUns.html"> Über&nbsp;uns</a>
-            <a href="https://www.fesloe.de"> Unsere&nbsp;Schule</a>
-        </div>
-    <div id="container">
-        <div id="content">
+    <div id="Content" style="grid-area: content;">
+        <div class="contentField">
             Wir sind die <b>Bibliothek-AG </b>der Freien Evangelischen Schule (<b>FES</b>) in Lörrach.<br> 
             <br>
             Wir kümmern uns nicht nur um die <b>Öffnung der Bibliothek</b> am Montag, Mitwoch und Freitag in der 1. Pause
@@ -34,64 +29,47 @@
             <br>
             <strong>Unsere Buch Empfehlungen für euch 💙!</strong>
         </div>
-        <div id="bookTips">
-            <div id="arrowLeft" class="arrow"><</div>
-            <div class="bookTip" id="bookTip0">
-                <div id="bookTip0Title" class="bookTipTitle"></div>
-                <img id="bookTip0IMG" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Wmb591rTMK6I2MWwYBuznPEpWz5q5Ixaww&s" alt="bookText">
-                <div id="bookTip0Author" ></div>
-                <div id="bookTip0AgeRange" ></div>
-                <div id="bookTip0Genre" ></div>
-                <div id="bookTip0By" ></div>
+        <div id="Book-Tipps">
+            <div class="arrow" id="arrow-l" onclick="changeBookTipps(-1)"><</div>
+            <div class="Book-Tipp" id="Book-Tipp-0" onclick="openBookDisplay(0)">
+                <div class="Book-Tipp-Title" id="Book-Tipp-Title-0">1. Book Tip</div>
+                <img class="Book-Tipp-IMG" id="Book-Tipp-IMG-0"  src="" >
+                <div class="Book-Tipp-INFO" id="Book-Tipp-INFO-0">INFO</div>
             </div>
-            <div class="bookTip" id="bookTip1">
-                <div id="bookTip1Title" class="bookTipTitle"></div>
-                <img id="bookTip1IMG" src="" alt="bookText">
-                <div id="bookTip1Author" ></div>
-                <div id="bookTip1AgeRange" ></div>
-                <div id="bookTip1Genre" ></div>
-                <div id="bookTip1By" ></div>
+            <div class="Book-Tipp" id="Book-Tipp-1" onclick="openBookDisplay(1)">
+                <div class="Book-Tipp-Title" id="Book-Tipp-Title-1">1. Book Tip</div>
+                <img class="Book-Tipp-IMG" id="Book-Tipp-IMG-1"  src="" >
+                <div class="Book-Tipp-INFO" id="Book-Tipp-INFO-1">INFO</div>
             </div>
-            <div class="bookTip" id="bookTip2">
-                <div id="bookTip2Title" class="bookTipTitle"></div>
-                <img id="bookTip2IMG" src="" alt="bookText">
-                <div id="bookTip2Author" ></div>
-                <div id="bookTip2AgeRange" ></div>
-                <div id="bookTip2Genre" ></div>
-                <div id="bookTip2By" ></div>
+            <div class="Book-Tipp" id="Book-Tipp-2" onclick="openBookDisplay(2)">
+                <div class="Book-Tipp-Title" id="Book-Tipp-Title-2">1. Book Tip</div>
+                <img class="Book-Tipp-IMG" id="Book-Tipp-IMG-2"  src="" >
+                <div class="Book-Tipp-INFO" id="Book-Tipp-INFO-2">INFO</div>
             </div>
-            <div id="arrowRight" class="arrow">></div>
+            <div class="arrow" id="arrow-r" onclick="changeBookTipps(1)">></div>
         </div>
-        <form id="feedbackForm" method="POST">
-    
-    <label for="message">Dein Feedback: <br> (bitte nicht spammen)</label>
-    <textarea id="message" name="message" rows="2" required></textarea><br><br>
-    
-    <input type="hidden" name="_subject" value="Anonymous School Feedback Submission">
-    
-    <button type="submit">Erfolg!</button>
-    
-    <p id="formStatus" style="font-weight: bold;"></p>
-</form>
-
-    </div>
-    <div id="overlay">
-        <div id="bookTipDisplay">
-            <div id="title"></div>
-            <img id="IMG" src="" alt="bookText">
-            <div id="information">
-                <div id="author"></div>
-                <div id="age-range"><br></div>
-                <div id="genre"></div>
-                <div id="rezession"></div>   
-            </div>
-            <div id="closeBookTip">close</div>
+        <div class="contentField ">
+            Wir kümmern uns nicht nur um die <b>Öffnung der Bibliothek</b>,<br> 
+            sondern veranstalten auch spannende Aktionen für die Klassen der FES. <br>(Infos zu den Aktionen findest du <a href="/aktionen">hier</a>)
+            <br><br>Treffen tut sich die bibliothek-AG jeden Mittwoch um <b>13</b> Uhr bei der bibliothek 
+            <br><br> Geleitet wird die bibliotheks AG von Daniel Kowalsky <a href="daniel.kowalsky@fesloe.de">daniel.kowalsky@fesloe.de</a> <br>(author von mehreren erfolgreichen buch reihen)</div>
         </div>
     </div>
-</main>
-
-<script src="bookTips.js"></script>
-<script src="feedback.js"></script>
-
+</div>
+<div id="Overlay">
+    <div id="Book-Display">
+        <div id="Book-Display-Header">
+            <img id="Book-Display-IMG" class="Book-Display-Child"src="">
+            <div id="Book-Display-Text-Container">
+                <div id="Book-Display-Title" class="Book-Display-Child">Title</div>
+                <div id="Book-Display-Info" class="Book-Display-Child">Info</div>
+            </div>
+        </div>
+        <div id="Book-Display-Rezesion" class="Book-Display-Child">Rezession</div>
+        <div id="Book-Display-Close" class="button" onclick="document.querySelector('#Book-Display').style.display = 'none'">schliesen</div>
+    </div>
+</div>
+<script src="main.js"></script>
+</main> 
 </body>
 </html>
