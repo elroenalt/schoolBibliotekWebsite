@@ -204,6 +204,7 @@ html, body, main {
     row-gap: 0;
 }
 #Book-Display-Header {
+    padding: 10px;
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
@@ -219,7 +220,7 @@ html, body, main {
     overflow-y: scroll;
 }
 #Book-Display-IMG {
-    margin: 20px;
+    margin: 0px;
     height: 35vh;
     height: 35dvh;
     padding: 0px;
@@ -229,7 +230,7 @@ html, body, main {
 }
 .Book-Display-Child {
     margin: 0;
-    padding: 20px
+    padding: 0;
 }
 #Book-Display-Info {
     padding: 0px;
@@ -246,6 +247,7 @@ html, body, main {
 /*event styling*/
 #events {
     padding: 0;
+    height: fit-content;
 }
 .event-img {
     width: inherit;
@@ -263,7 +265,7 @@ html, body, main {
     border-bottom: 5px white solid;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 500px) {
     .contentField {
         width: 90vw;
         padding: 5vw;
@@ -285,7 +287,7 @@ html, body, main {
     }
     #NavBar {
         margin-left: -0.5rem;
-        font-size: 0.75rem;
+        font-size: 1rem;
         gap: 10px;
     }
     #Book-Tipps {
@@ -299,6 +301,10 @@ html, body, main {
         width: 100vw;
         gap: 0;
         transition: 0;
+    }
+    #events {
+        width: 100vw;
+        height: fit-content;
     }
     #Book-Display {
         place-items: center;

@@ -1,5 +1,5 @@
 //location of the bookTips data
-const JsonFile = 'data.json';
+const JsonFile = 'data/book_tips.json';
 //where the bookTips later get saved
 let bookTips = undefined
 //variables for the display logic
@@ -39,7 +39,7 @@ function changeBookTipps(by) {
     curIndex += by;
     //update the arrows visivility
     document.querySelector('#arrow-l').style.display = curIndex <= 0 ? "none" : "grid"
-    document.querySelector('#arrow-r').style.display = curIndex + maxDisp >= bookTips.length ? "none" : "grid"
+    document.querySelector('#arrow-r').style.display = curIndex + maxDisp + (window.matchMedia("(max-width: 500px)").matches ? 0 : -1)>= bookTips.length ? "none" : "grid"
     //loop through each bookTipp display and update them
     let dataIndex = curIndex
     for(let i = 0; i < maxDisp; i++) {
@@ -63,7 +63,7 @@ function changeBookTipps(by) {
 }
 // check for wether the user is on mobile or below 436px in width
 function checkIfResized() {
-    const isMobile = window.matchMedia("(max-width: 426px)").matches;
+    const isMobile = window.matchMedia("(max-width: 500px)").matches;
     //changes the display amount respectivly
     maxDisp = isMobile ? 1 : 3;
     //turns the excess displays off
@@ -71,6 +71,8 @@ function checkIfResized() {
         document.querySelector(`#Book-Tipp-1`).style.display = "none";
         document.querySelector(`#Book-Tipp-2`).style.display = "none";
     }
+    //update the displays
+    changeBookTipps(0);
 }
 //load the bookTips from the Json file
 async function fetchJsonFiles() {
