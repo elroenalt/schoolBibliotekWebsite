@@ -2,7 +2,9 @@ html, body, main {
     margin: 0;
     padding: 0;
     border: 0;
-    background: rgb(37, 150, 190);
+    height: 100vh;
+    height: 100dvh;
+    background: #a3f3ff;
     overflow-x: hidden;
 }
 /* variables */
@@ -40,7 +42,7 @@ html, body, main {
 /* Nav Bar */
 #NavBar {
     background: var(--header-background);
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: Poppins;
     font-weight: 900;
     color: white;
@@ -213,6 +215,7 @@ html, body, main {
 }
 #Book-Display-Rezesion {
     height: 25vh;
+    height: 25dvh;
     overflow-y: scroll;
 }
 #Book-Display-IMG {
@@ -239,6 +242,13 @@ html, body, main {
     font-weight: 800;
     font-size: 2rem;
     padding: 0px;
+}
+/*event styling*/
+#events {
+    padding: 0;
+}
+.event-img {
+    width: inherit;
 }
 /* style classes */
 .button {
