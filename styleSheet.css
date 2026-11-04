@@ -290,8 +290,13 @@ header {
     padding: 0;
     height: fit-content;
 }
-.event-img {
-    width: inherit;
+.event-img,
+.img[src*="Bibliothek-AG.jpg"] {
+    display: block;
+    width: 67%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 /* style classes */
 .button {
