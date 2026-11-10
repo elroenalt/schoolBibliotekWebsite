@@ -18,6 +18,7 @@ function openBookDisplay(id) {
     ${data.minAge}`
     document.querySelector('#Book-Display-IMG').src = data.image
     document.querySelector('#Book-Display-Rezesion').innerText = `${data.rezension.replaceAll("$", "\n")}
+
     geschrieben von: ${data.by}`
 }
 
